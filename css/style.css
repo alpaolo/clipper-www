@@ -2,6 +2,7 @@
  ============================================================================= */
 body {
 	font-family: "verdana", Arial, sans-serif;
+	color:white;
 	margin:0px;
 	padding:0px;
 	width:100%;
@@ -17,7 +18,7 @@ font-family: "Times New Roman", Times, serif;
 
 
 
-#content_container{
+#content-container{
 	position:relative;
 	float:left;
 	width:100%;
@@ -29,7 +30,7 @@ font-family: "Times New Roman", Times, serif;
 }
 
 
-#content_container img{
+#content-container img{
 	width:100%;
 	opacity:1;z-index:1;
 	background-size:cover;
@@ -37,14 +38,19 @@ font-family: "Times New Roman", Times, serif;
 
 
 
-.btn {
+#btn-container {
 	position:absolute;
 	top:0;
 	z-index:10;
-	width:400px;
+}
+
+.home-btn {
+	width:200px;
 	height:30px;
 
 }
+
+
 
 /* PAGES
  ============================================================================= */

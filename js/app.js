@@ -20,85 +20,90 @@ angular.module('starter', ['ionic','starter.directives','starter.controllers'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
-		  $stateProvider.state('v1', {
+		  $stateProvider.state('visual-1', {
 									  url: '/',
 									  templateUrl: 'templates/visual-1.html'
 									  })
-		  $stateProvider.state('v2', {
-									 url: '/v2',
+		  $stateProvider.state('visual-2', {
+									 url: '/visual-2',
 									 templateUrl: 'templates/visual-2.html'
 									 })
-		  $stateProvider.state('v3', {
-									  url: '/v3',
+		  $stateProvider.state('visual-3-popup1', {
+									  url: '/visual-3-popup1',
 									  templateUrl: 'templates/visual-3-popup1.html'
 									  })
-		  $stateProvider.state('v4', {
-									  url: '/v4',
+		  $stateProvider.state('visual-4-popup2', {
+									  url: '/visual-4-popup2',
 									  templateUrl: 'templates/visual-4-popup2.html'
 									  })
-		  $stateProvider.state('v5', {
-									  url: '/v5',
+		  $stateProvider.state('visual-5', {
+									  url: '/visual-5',
 									  templateUrl: 'templates/visual-5.html'
 									  })
-		  $stateProvider.state('v6', {
-									  url: '/v6',
+		  $stateProvider.state('visual-6-popup', {
+									  url: '/visual-6-popup',
 									  templateUrl: 'templates/visual-6-popup.html'
 									  })
-		  $stateProvider.state('v7', {
-									  url: '/v7',
+		  $stateProvider.state('visual-7', {
+									  url: '/visual-7',
 									  templateUrl: 'templates/visual-7.html'
 									  })
-		  $stateProvider.state('v8', {
-									  url: '/v8',
+		  $stateProvider.state('visual-8', {
+									  url: '/visual-8',
 									  templateUrl: 'templates/visual-8.html'
 									  })
-		  $stateProvider.state('v9', {
-									  url: '/v9',
+		  $stateProvider.state('visual-9', {
+									  url: '/visual-9',
 									  templateUrl: 'templates/visual-9.html'
 									  })
-		  $stateProvider.state('v10', {
-									  url: '/v10',
+		  $stateProvider.state('visual-10-popup', {
+									  url: '/visual-10-popup',
 									  templateUrl: 'templates/visual-10-popup.html'
 									  })
-		  $stateProvider.state('v11', {
-									  url: '/v11',
+		  $stateProvider.state('visual-11', {
+									  url: '/visual-11',
 									  templateUrl: 'templates/visual-11.html'
 									  })
-		  $stateProvider.state('v12', {
-									  url: '/v12',
+		  $stateProvider.state('visual-12', {
+									  url: '/visual-12',
 									  templateUrl: 'templates/visual-12.html'
 									  })
-		  $stateProvider.state('v13', {
-										url: '/v13',
+		  $stateProvider.state('visual-13', {
+										url: '/visual-13',
 										templateUrl: 'templates/visual-13.html'
 										})
-		  $stateProvider.state('v14', {
-									  url: '/v14',
+		  $stateProvider.state('visual-14', {
+									  url: '/visual-14',
 									  templateUrl: 'templates/visual-14.html'
 									  })
-		  $stateProvider.state('v15', {
-									  url: '/v15',
+		  $stateProvider.state('visual-15', {
+									  url: '/visual-15',
 									  templateUrl: 'templates/visual-15.html'
 									  })
-		  $stateProvider.state('v16', {
-									  url: '/v16',
+		  $stateProvider.state('visual-16-popup', {
+									  url: '/visual-16-popup',
 									  templateUrl: 'templates/visual-16-popup.html'
 									  })
-		  $stateProvider.state('v18', {
-									  url: '/v18',
+		  $stateProvider.state('visual-17', {
+									  url: '/visual-17',
+									  templateUrl: 'templates/visual-17.html'
+									  })
+		  $stateProvider.state('visual-18-popup', {
+									  url: '/visual-18-popup',
 									  templateUrl: 'templates/visual-18-popup.html'
 									  })
-		  $stateProvider.state('v19', {
-									  url: '/v19',
+		  $stateProvider.state('visual-19', {
+									  url: '/visual-19',
 									  templateUrl: 'templates/visual-19.html'
 									  })
 			$urlRouterProvider.otherwise('/');
 		  })
 
-.controller('MainCtrl', function ($scope,$rootScope, $state , $timeout, $element, $location, $animate /* ,createDialog*/) {
+.controller('MainCtrl', function ($scope,$rootScope, $state ,  $timeout, $element, $location, $animate /* ,createDialog*/) {
 
 				$rootScope.switchPage = function (path) {
-				console.log("switch");
+				$rootScope.template = path.replace(/\//g,'');
+				console.log("path: "+$rootScope.template);
 					$rootScope.isRoot=true;
 					$location.path(path);
 				};
@@ -118,6 +123,9 @@ angular.module('starter', ['ionic','starter.directives','starter.controllers'])
 					$scope.direction='reverse';
 					window.history.back();
 				};
+
+				//$rootScope.templateName=$stateProvider.state['templateUrl'];
+
 
 			});
 

@@ -1,7 +1,9 @@
 <ion-content  style="position:absolute;">
 	<div ca-contentcontainer  id="content_container" style="">
 		<img ca-visual id="visual" ca-resize src="./img/Visual-18-popup.jpg" />
-		<button ca-homebtn id="homeBtn" class="btn homeBtn" ng-click="changePage('/','switch')" ></button>
+		<button ca-closebtn id="closebtn" class="btn close-btn"  ng-click="switchPage('/visual-17')" ></button>
+		<button ca-homebtn id="homebtn" class="btn home-btn" ng-click="switchPage('/visual-1')" ></button>
+		<button ca-returnbtn id="returnbtn" class="btn return-btn" ng-click="switchPage('/visual-13')" ></button>
 	</div>
 
 </ion-content>
