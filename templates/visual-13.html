@@ -1,11 +1,12 @@
+
 <ion-content  style="position:absolute;">
 
-	<ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="3">
+	<ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="{{activeSlide}}">
 		<ion-slide>
 			<div ca-contentcontainer  id="content-container" style="" >
 				<img ca-visual id="visual"  src="./img/visual-13.jpg" />
 				<div id="btn-container" ca-btncontainer>
-					<button ca-homebtn id="homebtn" class="btn home-btn" ng-click="switchPage('/visual-1')" ></button>
+					<button ca-homebtn id="homebtn" class="btn home-btn" ng-click="switchPage('/visual-1')" >{{activeSlide}}</button>
 				</div>
 			</div>
 		</ion-slide>
@@ -13,9 +14,8 @@
 			<div ca-contentcontainer  id="content-container" style="" >
 				<img ca-visual id="visual"  src="./img/visual-14.jpg" />
 				<div id="btn-container" ca-btncontainer>
-					<button ca-btn1 id="btn1" class="btn home-btn" value="pippo" ng-click="switchPage('/visual-2')" ></button>
-					<button ca-btn2 id="btn2" class="btn home-btn" ng-click="switchPage('/visual-9')" ></button>
-					<button ca-btn3 id="btn3" class="btn home-btn" ng-click="switchPage('/visual-13')" ></button>
+					<button ca-homebtn id="homebtn" class="btn home-btn" ng-click="switchPage('/visual-1')" >home</button>
+					<button ca-returnbtn id="returnbtn" class="btn return-btn" ng-click="switchPage('/visual-13',0)" >return</button>
 				</div>
 			</div>
 		</ion-slide>
@@ -23,9 +23,9 @@
 			<div ca-contentcontainer  id="content-container" style="" >
 				<img ca-visual id="visual"  src="./img/visual-15.jpg" />
 				<div id="btn-container" ca-btncontainer>
-					<button ca-btn1 id="btn1" class="btn home-btn" value="pippo" ng-click="switchPage('/visual-2')" ></button>
-					<button ca-btn2 id="btn2" class="btn home-btn" ng-click="switchPage('/visual-9')" ></button>
-					<button ca-btn3 id="btn3" class="btn home-btn" ng-click="switchPage('/visual-13')" ></button>
+					<button ca-btn1 id="btn1" class="btn menu-btn" ng-click="switchPage('/visual-16-popup')" >popup</button>
+					<button ca-homebtn id="homebtn" class="btn home-btn" ng-click="switchPage('/visual-1')" >home</button>
+					<button ca-returnbtn id="returnbtn" class="btn return-btn" ng-click="switchPage('/visual-13',0)" >return</button>
 				</div>
 			</div>iv>
 			</div>
@@ -34,9 +34,9 @@
 			<div ca-contentcontainer  id="content-container" style="" >
 				<img ca-visual id="visual"  src="./img/visual-17.jpg" />
 				<div id="btn-container" ca-btncontainer>
-					<button ca-btn1 id="btn1" class="btn home-btn" value="pippo" ng-click="switchPage('/visual-2')" ></button>
-					<button ca-btn2 id="btn2" class="btn home-btn" ng-click="switchPage('/visual-9')" ></button>
-					<button ca-btn3 id="btn3" class="btn home-btn" ng-click="switchPage('/visual-13')" ></button>
+					<button ca-btn1 id="btn1" class="btn menu-btn" ng-click="switchPage('/visual-18-popup')" ></button>
+					<button ca-homebtn id="homebtn" class="btn home-btn" ng-click="switchPage('/visual-1')" >home</button>
+					<button ca-returnbtn id="returnbtn" class="btn return-btn" ng-click="switchPage('/visual-13',0)" >return</button>
 				</div>
 			</div>
 		</ion-slide>
@@ -45,9 +45,7 @@
 				<div ca-contentcontainer  id="content-container" style="" >
 					<img ca-visual id="visual"  src="./img/visual-19.jpg" />
 					<div id="btn-container" ca-btncontainer>
-						<button ca-btn1 id="btn1" class="btn home-btn" value="pippo" ng-click="switchPage('/visual-2')" ></button>
-						<button ca-btn2 id="btn2" class="btn home-btn" ng-click="switchPage('/visual-9')" ></button>
-						<button ca-btn3 id="btn3" class="btn home-btn" ng-click="switchPage('/visual-13')" ></button>
+						<button ca-homebtn id="homebtn" class="btn home-btn" ng-click="switchPage('/visual-1')" >home</button>
 					</div>
 				</div>
 		</ion-slide>
