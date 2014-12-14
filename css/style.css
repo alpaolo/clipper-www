@@ -2,6 +2,7 @@
  ============================================================================= */
 body {
 	font-family: "verdana", Arial, sans-serif;
+	background-color:#fff;
 	color:white;
 	margin:0px;
 	padding:0px;
@@ -12,7 +13,10 @@ body {
 	-webkit-backface-visibility:hidden;
 
 }
-font-family: "Times New Roman", Times, serif;
+
+.white{
+	background-color:#fff;
+}
 
 
 
@@ -30,13 +34,12 @@ font-family: "Times New Roman", Times, serif;
 }
 
 
-#content-container img{
-	width:100%;
-	opacity:1;z-index:1;
-	background-size:cover;
+
+
+.btn{
+	position:absolute;
+	opacity:0.5;
 }
-
-
 
 #btn-container {
 	position:absolute;
@@ -45,9 +48,24 @@ font-family: "Times New Roman", Times, serif;
 }
 
 .home-btn {
-	width:200px;
-	height:30px;
+	width:120px;
+	height:120px;
+	top:1328px;
+	left:96px;
+}
 
+.close-btn {
+	width:110px;
+	height:110px;
+	top:1858px;
+	left:94px;
+}
+
+.return-btn{
+	width:145px;
+	height:145px;
+	top:212px;
+	left:1326px;
 }
 
 

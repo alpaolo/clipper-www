@@ -5,6 +5,7 @@ angular.module('starter.controllers', [])
 				})
 
 .controller('v13Ctrl',function ($scope, $rootScope) {
-
+	console.log("active slide: "+$rootScope.activeSlide);
+	$scope.activeSlide=$rootScope.activeSlide;
 				})
 

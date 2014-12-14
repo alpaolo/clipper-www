@@ -102,9 +102,9 @@ angular.module('starter', ['ionic','starter.directives','starter.controllers'])
 .controller('MainCtrl', function ($scope,$rootScope, $state ,  $timeout, $element, $location, $animate /* ,createDialog*/) {
 
 				$rootScope.switchPage = function (path,slide) {
-				slide = typeof a !== 'undefined' ? slide : 0;
-				slide=5;
-				$rootScope.activeSlide=5;
+				if(slide==null)slide=0;
+				console.log("switch: "+slide)
+				$rootScope.activeSlide=slide;
 				$rootScope.template = path.replace(/\//g,'');
 				console.log("path: "+$rootScope.template);
 					$rootScope.isRoot=true;

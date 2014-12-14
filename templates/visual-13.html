@@ -1,7 +1,6 @@
 
-<ion-content  style="position:absolute;">
-
-	<ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="{{activeSlide}}">
+<ion-content  ng-controller="v13Ctrl" style="position:absolute;">
+	<ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="activeSlide">
 		<ion-slide>
 			<div ca-contentcontainer  id="content-container" style="" >
 				<img ca-visual id="visual"  src="./img/visual-13.jpg" />

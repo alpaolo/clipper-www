@@ -52,14 +52,35 @@ angular.module('starter.directives', [])
 				  link : link
 			  };
 			  })
-.directive('caContentcontainer', function($rootScope, $timeout) {
+.directive('caVisual', function($rootScope, $timeout) {
 				  function link(scope, element, attrs) {
-			  console.log($rootScope.winH);
+					  console.log("winw: "+$rootScope.winW);
+					  console.log("winh: "+$rootScope.winH);
+					  var scaleFactor = $rootScope.scaleFactor;
+					  element.css('height',$rootScope.winH+'px');
+					  var width=$rootScope.winH/3*4;
+					  element.css('width',+width+'px');
+				  }
+				  return {
+				  link : link
+				  };
+			  })
+			  
+			  
+.directive('caButton', function($rootScope, $timeout) {
+				  function link(scope, element, attrs) {
 					  var scaleFactor = $rootScope.scaleFactor;
 					  var marginLeft = $rootScope.marginLeft;
-					  element.css('height', $rootScope.winH);
-					  element.css('width', $rootScope.winW);
-
+					  var elementH=Math.floor(parseInt(element.css('height'))/scaleFactor);
+					  var elementW=Math.floor(parseInt(element.css('width'))/scaleFactor);
+					  var elementT=Math.floor(parseInt(element.css('top'))/scaleFactor);
+					  var elementL=Math.floor(parseInt(element.css('left'))/scaleFactor);
+					  console.log ("element: "+element.attr('Id')+" - "+elementH+" - "+elementW);
+					  
+					  element.css('height', elementH+'px');
+					  element.css('width',  elementW+'px');
+					  element.css('top',  elementT+'px');
+					  element.css('left',  elementL+'px');
 				  }
 
 				  return {
