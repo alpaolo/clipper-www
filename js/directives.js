@@ -54,8 +54,6 @@ angular.module('starter.directives', [])
 			  })
 .directive('caVisual', function($rootScope, $timeout) {
 				  function link(scope, element, attrs) {
-					  console.log("winw: "+$rootScope.winW);
-					  console.log("winh: "+$rootScope.winH);
 					  var scaleFactor = $rootScope.scaleFactor;
 					  element.css('height',$rootScope.winH+'px');
 					  var width=$rootScope.winH/3*4;
@@ -75,8 +73,6 @@ angular.module('starter.directives', [])
 					  var elementW=Math.floor(parseInt(element.css('width'))/scaleFactor);
 					  var elementT=Math.floor(parseInt(element.css('top'))/scaleFactor);
 					  var elementL=Math.floor(parseInt(element.css('left'))/scaleFactor);
-					  console.log ("element: "+element.attr('Id')+" - "+elementH+" - "+elementW);
-					  
 					  element.css('height', elementH+'px');
 					  element.css('width',  elementW+'px');
 					  element.css('top',  elementT+'px');

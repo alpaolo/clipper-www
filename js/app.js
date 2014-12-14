@@ -103,18 +103,17 @@ angular.module('starter', ['ionic','starter.directives','starter.controllers'])
 
 				$rootScope.switchPage = function (path,slide) {
 				if(slide==null)slide=0;
-				console.log("switch: "+slide)
 				$rootScope.activeSlide=slide;
 				$rootScope.template = path.replace(/\//g,'');
 				console.log("path: "+$rootScope.template);
 					$rootScope.isRoot=true;
+					$location.path("/");
 					$location.path(path);
 				};
 
 				$rootScope.changePage = function (path,type) {
 					$rootScope.isRoot=true;
 					$scope.animationClass=type;
-					console.log('class: '+type)
 					$location.path(path);
 				};
 
