@@ -12,14 +12,12 @@ body {
 	backface-visibility:hidden;
 	-webkit-backface-visibility:hidden;
 
+
 }
 
 .white{
 	background-color:#fff;
 }
-
-
-
 
 
 #content-container{
@@ -30,7 +28,6 @@ body {
 	opacity:1;
 	z-index:1;
 	overflow:hidden;
-	
 }
 
 
@@ -38,7 +35,9 @@ body {
 
 .btn{
 	position:absolute;
-	opacity:0.5;
+	opacity:.0;
+	cursor:pointer;
+	
 }
 
 #btn-container {

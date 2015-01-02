@@ -3,19 +3,85 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic','starter.directives','starter.controllers'])
+angular.module('starter', ['ionic','starter.directives','starter.controllers', 'ngCordova'])
 
 .run(function($ionicPlatform) {
 	  $ionicPlatform.ready(function() {
 								  // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
 								  // for form inputs)
 								  if(window.cordova && window.cordova.plugins.Keyboard) {
-								  cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+									  cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
 								  }
 								  if(window.StatusBar) {
-								  StatusBar.styleDefault();
+									  StatusBar.styleDefault();
 								  }
+								  
 								  });
+	  if (document.images) {
+			img1 = new Image();
+			img2 = new Image();
+			img3 = new Image();
+			img4 = new Image();
+			img5 = new Image();
+			img6 = new Image();
+			img7 = new Image();
+			img8 = new Image();
+			img9 = new Image();
+			img10 = new Image();
+			img11 = new Image();
+			img12 = new Image();
+			img13 = new Image();
+			img14 = new Image();
+			img15 = new Image();
+			img16 = new Image();
+			img17 = new Image();
+			img18 = new Image();
+			img19 = new Image();
+			
+
+			img1.src = "./img/Visual-1@x2.jpg";
+			img2.src = "./img/Visual-2@x2.jpg";
+			img3.src = "./img/Visual-3-popup1@x2.jpg";
+			img4.src = "./img/Visual-4-popup2@x2.jpg";
+			img5.src = "./img/Visual-5@x2.jpg";
+			img6.src = "./img/Visual-6-popup@x2.jpg";
+			img7.src = "./img/Visual-7@x2.jpg";
+			img8.src = "./img/Visual-8@x2.jpg";
+			img9.src = "./img/Visual-9@x2.jpg";
+			img10.src = "./img/Visual-10popup@x2.jpg";
+			img11.src = "./img/Visual-11@x2.jpg";
+			img12.src = "./img/Visual-12@x2.jpg";
+			img13.src = "./img/Visual-13@x2.jpg";
+			img14.src = "./img/Visual-14@x2.jpg";
+			img15.src = "./img/Visual-15@x2.jpg";
+			img16.src = "./img/Visual-16-popup@x2.jpg";
+			img17.src = "./img/Visual-17@x2.jpg";
+			img18.src = "./img/Visual-18-popup@x2.jpg";
+			img19.src = "./img/Visual-19@x2.jpg";
+			img1.src = "./img/Visual-1.jpg";
+			img2.src = "./img/Visual-2.jpg";
+			img3.src = "./img/Visual-3-popup1.jpg";
+			img4.src = "./img/Visual-4-popup2.jpg";
+			img5.src = "./img/Visual-5.jpg";
+			img6.src = "./img/Visual-6-popup.jpg";
+			img7.src = "./img/Visual-7.jpg";
+			img8.src = "./img/Visual-8.jpg";
+			img9.src = "./img/Visual-9.jpg";
+			img10.src = "./img/Visual-10-popup.jpg";
+			img11.src = "./img/Visual-11.jpg";
+			img12.src = "./img/Visual-12.jpg";
+			img13.src = "./img/Visual-13.jpg";
+			img14.src = "./img/Visual-14.jpg";
+			img15.src = "./img/Visual-15.jpg";
+			img16.src = "./img/Visual-16-popup.jpg";
+			img17.src = "./img/Visual-17.jpg";
+			img18.src = "./img/Visual-18-popup.jpg";
+			img19.src = "./img/Visual-19.jpg";
+			console.log("finish to load images");
+			
+		}
+	  
+	  
 	  })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -99,14 +165,20 @@ angular.module('starter', ['ionic','starter.directives','starter.controllers'])
 			$urlRouterProvider.otherwise('/');
 		  })
 
-.controller('MainCtrl', function ($scope,$rootScope, $state ,  $timeout, $element, $location, $animate /* ,createDialog*/) {
+.controller('MainCtrl', function ($scope,$rootScope, $state ,  $timeout, $element, $location, $animate, $cordovaSplashscreen /* ,createDialog*/) {
 
+	
+		
+	
 				$rootScope.switchPage = function (path,slide) {
-				if(slide==null)slide=0;
-				$rootScope.activeSlide=slide;
-				$rootScope.template = path.replace(/\//g,'');
-				console.log("path: "+$rootScope.template);
+					if(slide==null)slide=0;
+					$rootScope.activeSlide=slide;
+					$rootScope.template = path.replace(/\//g,'');
+					console.log("path: "+$rootScope.template);
 					$rootScope.isRoot=true;
+					$rootScope.imageSuffix="@x2";
+					if(window.devicePixelRatio===2){$rootScope.retina=true;$rootScope.imageSuffix="@x2";}
+					else $rootScope.retina=false;
 					$location.path("/");
 					$location.path(path);
 				};

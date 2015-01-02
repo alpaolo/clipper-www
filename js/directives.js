@@ -19,7 +19,7 @@ angular.module('starter.directives', [])
 
 				  var areaH=$rootScope.winH;
 				  var areaW=areaH/3*4;
-				  console.log(areaW+" areaW")
+				  console.log(" device pixel ratio "+window.devicePixelRatio);
 				  $rootScope.scaleFactor=1536/$rootScope.winH;  // Lo scale factor serve quando si apportano valori riferiti al file grafico 2048x1536
 				  $rootScope.contentContainerH=areaH;
 				  $rootScope.contentContainerW=areaW;
@@ -41,6 +41,8 @@ angular.module('starter.directives', [])
 				  if($rootScope.winH < 400 )$rootScope.defaultHSelectionLimit = 10; // limite minimo altezza riga
 				  else if($rootScope.winH > 400 && $rootScope.winH < 800 ) $rootScope.defaultHSelectionLimit = 30;
 				  else if($rootScope.winH > 800 ) $rootScope.defaultHSelectionLimit = 40;
+				  
+				  
 				  
 				  
 				  function link(scope, element, attrs) {
