@@ -5,7 +5,8 @@ angular
 
 				$rootScope.imageSuffix="@x2";
 	 			if(window.devicePixelRatio===2){$rootScope.retina=true;$rootScope.imageSuffix="@x2";}
-	 			else {$rootScope.retina=false;$rootScope.imageSuffix="@x1";}
+	 			else {$rootScope.retina=false;$rootScope.imageSuffix="";}
+	 			
 	
 				$rootScope.switchPage = function (path,slide) {
 					if(slide==null)slide=0;
