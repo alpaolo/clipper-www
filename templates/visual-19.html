@@ -1,7 +1,16 @@
 <ion-content ng-cloak  style="position:absolute;" scroll="false">
 	<div ca-contentcontainer  id="content-container" style="" scroll="false">
-					<img ca-visual id="visual"  src="./img/Visual-19{{imageSuffix}}.jpg" />
+					<img ca-visual id="visual"  ng-src="./img/Visual-19{{imageSuffix}}.jpg" />
 					<div id="btn-container" ca-btncontainer>
 						<button ca-homebtn ca-button id="homebtn" class="btn home-btn" ng-click="switchPage('/visual-1')" style="width:120px;height:120px;left:96px;top:1328px;"></button>
+						<button ca-homebtn ca-button id="biblio1btn" class="btn home-btn" ng-click="switchPage('/visual-1')" style="width:1046px;height:120px;left:248px;top:894px;"></button>
+						<button ca-homebtn ca-button id="biblio2btn" class="btn home-btn" ng-click="switchPage('/visual-1')" style="width:858px;height:138px;left:248px;top:1014px;"></button>
+						<button ca-homebtn ca-button id="biblio3btn" class="btn home-btn" ng-click="switchPage('/visual-1')" style="width:677px;height:78px;left:248px;top:1153px;"></button>
+						<button ca-homebtn ca-button id="biblio4btn" class="btn home-btn" ng-click="switchPage('/visual-1')" style="width:677px;height:66px;left:248px;top:1231px;"></button>
+						<button ca-homebtn ca-button id="biblio5btn" class="btn home-btn" ng-click="switchPage('/visual-1')" style="width:677px;height:66px;left:248px;top:1296px;"></button>
+						<button ca-homebtn ca-button id="biblio6btn" class="btn home-btn" ng-click="switchPage('/visual-1')" style="width:677px;height:66px;left:248px;top:1362px;"></button>
+						<button ca-homebtn ca-button id="rcp1btn" class="btn home-btn" ng-click="openPDF('./pdf/rcp/asalex_rcpnew_hd.pdf')" style="width:375px;height:82px;left:1266px;top:1186px;"></button>
+						<button ca-homebtn ca-button id="rcp2btn" class="btn home-btn" ng-click="openPDF('./pdf/rcp/clipper_compr_hd.pdf')" style="width:375px;height:82px;left:1266px;top:1272px;"></button>
+						<button ca-homebtn ca-button id="rcp3btn" class="btn home-btn" ng-click="openPDF('./pdf/rcp/clipper_s.rettale_hd.pdf')" style="width:375px;height:82px;left:1266px;top:1354px;"></button>
 					</div>
 </ion-content>

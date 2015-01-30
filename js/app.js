@@ -16,6 +16,8 @@ angular.module('starter', ['ionic','starter.directives','starter.controllers', '
 									  StatusBar.styleDefault();
 								  }
 								  
+								 
+								  
 								  });
 	  if (document.images) {
 			img1 = new Image();
@@ -165,41 +167,5 @@ angular.module('starter', ['ionic','starter.directives','starter.controllers', '
 			$urlRouterProvider.otherwise('/');
 		  })
 
-.controller('MainCtrl', function ($scope,$rootScope, $state ,  $timeout, $element, $location, $animate, $cordovaSplashscreen /* ,createDialog*/) {
 
-	
-		
-	
-				$rootScope.switchPage = function (path,slide) {
-					if(slide==null)slide=0;
-					$rootScope.activeSlide=slide;
-					$rootScope.template = path.replace(/\//g,'');
-					console.log("path: "+$rootScope.template);
-					$rootScope.isRoot=true;
-					$rootScope.imageSuffix="@x2";
-					if(window.devicePixelRatio===2){$rootScope.retina=true;$rootScope.imageSuffix="@x2";}
-					else $rootScope.retina=false;
-					$location.path("/");
-					$location.path(path);
-				};
-
-				$rootScope.changePage = function (path,type) {
-					$rootScope.isRoot=true;
-					$scope.animationClass=type;
-					$location.path(path);
-				};
-
-				$rootScope.historyBack = function(type) {
-					console.log("history back");
-					//resetScore();
-					$scope.animationClass=type;
-					$rootScope.isBack = true;
-					$scope.direction='reverse';
-					window.history.back();
-				};
-
-				//$rootScope.templateName=$stateProvider.state['templateUrl'];
-
-
-			});
 

@@ -1,9 +1,11 @@
 
 <ion-content ng-cloak  ng-controller="v13Ctrl" style="position:absolute;" scroll="false">
-	<ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="activeSlide">
+
+	<ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="activeSlide" show-pager="false">
 		<ion-slide>
+		
 			<div ca-contentcontainer  id="content-container" style="" scroll="false">
-				<img ca-visual id="visual"  src="./img/Visual-13{{imageSuffix}}.jpg" />
+				<img ca-visual id="visual"  ng-src="./img/Visual-13{{imageSuffix}}.jpg" />
 				<div id="btn-container" ca-btncontainer>
 					<button ca-homebtn ca-button id="homebtn" class="btn home-btn" ng-click="switchPage('/visual-1')" style="width:120px;height:120px;left:96px;top:1328px;"></button>
 					<button ca-btn1 ca-button id="btn1" class="btn" ng-click="goSlide(1)" style="width:134px;height:366px;left:1854px;top:210px;"></button>
@@ -15,7 +17,7 @@
 		</ion-slide>
 		<ion-slide>
 			<div ca-contentcontainer  id="content-container" style="" scroll="false">
-				<img ca-visual id="visual"  src="./img/Visual-14{{imageSuffix}}.jpg" />
+				<img ca-visual id="visual"  ng-src="./img/Visual-14{{imageSuffix}}.jpg" />
 				<div id="btn-container" ca-btncontainer>
 					<button ca-homebtn ca-button id="homebtn" class="btn home-btn" ng-click="switchPage('/visual-1')" style="width:120px;height:120px;left:96px;top:1328px;"></button>
 						<button ca-btn1 ca-button id="btn1" class="btn" ng-click="goSlide(1)" style="width:134px;height:366px;left:1854px;top:210px;"></button>
@@ -28,7 +30,7 @@
 		</ion-slide>
 		<ion-slide>
 			<div ca-contentcontainer  id="content-container" style="" scroll="false">
-				<img ca-visual id="visual"  src="./img/Visual-15{{imageSuffix}}.jpg" />
+				<img ca-visual id="visual"  ng-src="./img/Visual-15{{imageSuffix}}.jpg" />
 				<div id="btn-container" ca-btncontainer>
 					<button ca-btn1 ca-button id="btn1" class="btn menu-btn" ng-click="switchPage('/visual-16-popup')" style="width:150px;height:150px;left:1510px;top:464px;"></button>
 						<button ca-btn1 ca-button id="btn1" class="btn" ng-click="goSlide(1)" style="width:134px;height:366px;left:1854px;top:210px;"></button>
@@ -38,12 +40,12 @@
 					<button ca-returnbtn ca-button id="returnbtn" class="btn return-btn" ng-click="goSlide(0)" style="width:120px;height:120px;top:1326px;left:220px;"></button>
 					<button ca-btn3 ca-button id="btn3" class="btn" ng-click="switchPage('/visual-19')"  style="width:316px;height:119px;left:1634px;top:1342px;"></button>
 				</div>
-			</div>iv>
+			</div>
 			</div>
 		</ion-slide>
 		<ion-slide>
 			<div ca-contentcontainer  id="content-container" style="" scroll="false">
-				<img ca-visual id="visual"  src="./img/Visual-17{{imageSuffix}}.jpg" />
+				<img ca-visual id="visual"  ng-src="./img/Visual-17{{imageSuffix}}.jpg" />
 				<div id="btn-container" ca-btncontainer>
 					<button ca-btn1 ca-button id="btn1" class="btn menu-btn" ng-click="switchPage('/visual-18-popup')" style="width:150px;height:150px;left:1590px;top:494px;"></button>
 						<button ca-btn1 ca-button id="btn1" class="btn" ng-click="goSlide(1)" style="width:134px;height:366px;left:1854px;top:210px;"></button>
