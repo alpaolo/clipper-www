@@ -35,7 +35,7 @@ body {
 
 .btn{
 	position:absolute;
-	opacity:.0;
+	opacity:.5;
 	cursor:pointer;
 	
 }

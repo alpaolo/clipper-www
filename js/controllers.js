@@ -11,5 +11,9 @@ angular.module('starter.controllers', [])
 	 $scope.goSlide = function(toSlide) {
 		    $ionicSlideBoxDelegate.slide(toSlide,1);
 	}
+	 $scope.goSlide = function(toSlide) {
+		    
+		 $ionicSlideBoxDelegate.slide(toSlide,1);
+	}
 })
 
