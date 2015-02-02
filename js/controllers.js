@@ -39,7 +39,7 @@ angular
 	                ref = window
 	                        .open(
 	                                url,
-	                                '_blank', 'location=yes');
+	                                '_blank', 'location=no');
 	                ref.addEventListener('exit', function() {
 		                ref.removeEventListener('exit', function() {
 		                });

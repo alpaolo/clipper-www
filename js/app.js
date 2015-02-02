@@ -116,6 +116,18 @@ angular.module('starter', ['ionic','starter.directives','starter.controllers', '
 									  url: '/visual-7',
 									  templateUrl: 'templates/visual-7.html'
 									  })
+		  $stateProvider.state('visual-7a-popup', {
+									  url: '/visual-7a-popup',
+									  templateUrl: 'templates/visual-7a-popup.html'
+									  })
+		  $stateProvider.state('visual-7b-popup', {
+									  url: '/visual-7b-popup',
+									  templateUrl: 'templates/visual-7b-popup.html'
+									  })
+		   $stateProvider.state('visual-7c-popup', {
+									  url: '/visual-7c-popup',
+									  templateUrl: 'templates/visual-7c-popup.html'
+									  })
 		  $stateProvider.state('visual-8', {
 									  url: '/visual-8',
 									  templateUrl: 'templates/visual-8.html'
