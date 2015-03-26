@@ -1,7 +1,5 @@
-
-<ion-content ng-cloak  ng-controller="v13Ctrl" style="position:absolute;" scroll="false">
-
-	<ion-slide-box on-slide-changed="slideHasChanged($index)" active-slide="activeSlide" show-pager="false">
+<ion-content ng-cloak  ng-controller="v13Ctrl" style="position:absolute;" scroll="false" >
+	<ion-slide-box ng-init="disableSwipe()" on-slide-changed="slideHasChanged($index)" active-slide="activeSlide" show-pager="false">
 		<ion-slide>
 		
 			<div ca-contentcontainer  id="content-container" style="" scroll="false">

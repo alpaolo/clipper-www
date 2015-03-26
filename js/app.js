@@ -5,20 +5,22 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic','starter.directives','starter.controllers', 'ngCordova'])
 
-.run(function($ionicPlatform) {
-	  $ionicPlatform.ready(function() {
-								  // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-								  // for form inputs)
-								  if(window.cordova && window.cordova.plugins.Keyboard) {
-									  cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-								  }
-								  if(window.StatusBar) {
-									  StatusBar.styleDefault();
-								  }
-								  
-								 
-								  
-								  });
+.run(function($ionicPlatform, $ionicSlideBoxDelegate) {
+	  			
+	$ionicPlatform.ready(function() {
+		  
+									// Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+									// for form inputs)
+									if(window.cordova && window.cordova.plugins.Keyboard) {
+										cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+									}
+									if(window.StatusBar) {
+										StatusBar.styleDefault();
+									}
+									
+									
+									
+								});
 	  if (document.images) {
 			img1 = new Image();
 			img2 = new Image();
